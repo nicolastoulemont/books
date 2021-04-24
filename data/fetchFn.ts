@@ -43,8 +43,8 @@ async function fetchBooks(): Promise<Array<BookWithMetaData> | undefined> {
       // handle error logging based on the chosen error logging service (for example: sentry or others)
     } else {
       console.error(error)
+      throw new Error(error)
     }
-    return error
   }
 }
 
